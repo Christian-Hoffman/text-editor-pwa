@@ -2,9 +2,9 @@
   "name": "JATE",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start:dev": "concurrently \"cd server && npm run build\" \"cd client && npm run server\"",
+    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\"",
     "start": "npm run build && cd server && node server.js",
     "server": "cd server node server.js --ignore client",
     "build": "cd client && npm run build",

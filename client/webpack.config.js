@@ -19,8 +19,8 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './index.js',
-        title: 'JATE'
+        template: './index.html',
+        title: 'Webpack Plugin'
       }),
       new WebpackPwaManifest({
         name: 'Just Another Text Editor',
