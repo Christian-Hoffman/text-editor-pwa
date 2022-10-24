@@ -31,7 +31,7 @@ module.exports = () => {
         short_name: 'JATE',
         description: "A PWA text editor",
         fingerprints: false,
-        background_color: #0e1117,
+        background_color: '#0e1117',
         publicPath: '.',
         icons: [
           { src: path.resolve('src/images/logo.png'),
@@ -48,13 +48,15 @@ module.exports = () => {
           test: /\.css/1,
           use: ['style-loader', 'css-loader'],
         },
-        test: /\.m?js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-            plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+        {
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+            },
           },
         },
       ],
