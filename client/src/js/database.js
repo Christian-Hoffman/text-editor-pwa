@@ -15,7 +15,7 @@ const initdb = async () =>
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
   const textEditorDB = await openDB('jate', 1);
-  const tVar = textEditorDB.transaction('jate', readWrite);
+  const tVar = textEditorDB.transaction('jate', 'readWrite');
   const sVar = tVar.objectStore('jate');
   const request = sVar.put({ id: 0, value: content });
   const result = await request;
