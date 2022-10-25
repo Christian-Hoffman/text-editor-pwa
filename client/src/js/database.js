@@ -29,7 +29,7 @@ export const getDb = async () => {
   const sVar = tVar.objectStore('jate');
   const request = sVar.get(0);
   const result = await request;
-  if (typeof result === 'undefined') {
+  if (typeof result == 'undefined') {
     console.log('Data not found');
   } else {
     console.log('Data retrieved from database', result.value);
